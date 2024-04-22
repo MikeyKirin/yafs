@@ -1,0 +1,162 @@
+/* Style the Body */
+body {
+  background: #020024;
+  background: linear-gradient(180deg, #020024 0%, #094179 0%, #85eaff 100%);
+}
+  
+
+/* Add a black background color to the top navigation */
+.topnav {
+    background-color: #020024;
+    padding-left: 200px;
+    overflow: hidden;
+    position: fixed;
+    width: 100%;
+  }
+  
+/* Style the links inside the navigation bar */
+ .topnav a {
+   float: left;
+   color: #85eaff;
+   text-align: center;
+   padding: 14px 16px;
+   text-decoration: none;
+   font-size: 17px;
+   font-family: arial;
+   font-weight: bold;
+ }
+ 
+ /* Change the color of links on hover */
+ .topnav a:hover:not(.active) {
+  background-color: #85eaff;
+  color: #020024;
+ }
+ 
+ /* Add a color to the active/current link */
+ .topnav a.active {
+    background-color: #85eaff;
+    color: #020024;
+    font-family: arial;
+    font-weight: bold;
+ }
+
+ /* Make the form submission text box larger */
+ .form-text {
+   min-height: 100px;
+   width: 100%;
+   max-width: 450px;
+ }
+
+  /* The side navigation menu */
+.sidebar {
+  margin: 0;
+  padding: 0;
+  width: 200px;
+  background-color: #020024;
+  position: fixed;
+  height: 100%;
+  overflow: auto;
+}
+
+/* Sidebar links */
+.sidebar a {
+  display: block;
+  color: #85eaff;
+  padding: 16px;
+  text-decoration: none;
+  font-family: arial;
+  font-weight: bold;
+}
+
+/* Active/current link */
+.sidebar a.active {
+  background-color: #85eaff;
+  color: #020024;
+}
+
+/* Links on mouse-over */
+.sidebar a:hover:not(.active) {
+  background-color: #85eaff;
+  color: #020024;
+}
+
+/* Page content. The value of the margin-left property should match the value of the sidebar's width property */
+div.content {
+  margin-left: 200px;
+  padding: 100px 16px;
+  height: 1000px;
+}
+
+/* Text on the Home Page. This will affect everything under the top menu and above the buttons */
+.home-text {
+  padding-bottom: 200px;
+}
+
+/* center the home text content */
+.content-container {
+  width: 50%;
+  margin: 0 auto;
+  text-align: center;
+}
+
+/* Center the homescreen button div */
+.home-buttons {
+  width: 50%;
+  margin: 0 auto;
+  text-align: center;
+}
+
+/* Feedback Text/Content */
+.feedback-content {
+  width: 50%;
+  margin: auto;
+  text-align: left;
+}
+
+/* Adding style to tables */
+table, th, td {
+  border:1px solid black;
+}
+
+/* Add some padding to just the TH*/
+th {
+  padding: 0px 50px;
+}
+
+.styled-table {
+  border-collapse: collapse;
+  margin: 25px 0;
+  font-size: 0.9em;
+  font-family: sans-serif;
+  min-width: 400px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+  width: 100%;
+}
+
+.styled-table thead tr {
+  background-color: #85eaff;
+  color: #ffffff;
+  text-align: left;
+}
+
+.styled-table th,
+.styled-table td {
+    padding: 12px 15px;
+}
+
+.styled-table tbody tr {
+  border-bottom: 1px solid #dddddd;
+}
+
+.styled-table tbody tr:nth-of-type(even) {
+  background-color: #f3f3f3;
+}
+
+.styled-table tbody tr:last-of-type {
+  border-bottom: 2px solid #020024;
+}
+
+.styled-table tbody tr.active-row {
+  font-weight: bold;
+  color: #85eaff;
+}

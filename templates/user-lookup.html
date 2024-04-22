@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Panel</title>
+    <link rel="stylesheet" href="../../style/style.css">
+</head>
+    <div class="topnav" id="topnav">
+        <a href="{{ url_for('index')}}">Home</a>
+        <a href="{{ url_for('feedback')}}" class="active">Feedback</a>
+        <a href="{{ url_for('admin')}}">Admin Panel</a>
+    </div>
+    <div class="sidebar">
+        <a href="queries.html">Queries</a>
+        <a class="active" href="user-lookup.html">User Lookup</a>
+    </div>
+
+    <!-- Load React. -->
+    <!-- Note: when deploying, replace "development.js" with "production.min.js". -->
+    <script src="https://unpkg.com/react@18/umd/react.development.js" crossorigin></script>
+    <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js" crossorigin></script>
+    <!-- Load our React component. -->
+    <script src="app.js"></script>
+<body>
+    <div class="content">
+        Please provide either the UserID, Username or Email then hit the "Submit" button to proceed:
+        <br>
+        <br>
+        <br>
+        UserID:
+        <input type="text">
+        <br>
+        <br>
+        Username:
+        <input type="text">
+        <br>
+        <br>
+        Email:
+        <input type="text">
+        <br>
+        <br>
+        <form onsubmit="return userQuery();" class="my-form">
+        <input type="Submit"></button>
+        </form>
+      </div>
+</body>
+</html>

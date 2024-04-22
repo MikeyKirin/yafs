@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Panel</title>
+    <link rel="stylesheet" href="../static/style.css">
+</head>
+        <div class="topnav" id="topnav">
+            <a href="{{ url_for('index')}}">Home</a>
+            <a href="{{ url_for('feedback')}}" class="active">Feedback</a>
+            <a href="{{ url_for('admin')}}">Admin Panel</a>
+        </div>
+        <div class="sidebar">
+            <a class="active" href="queries.html">Queries</a>
+            <a href="user-lookup.html">User Lookup</a>
+        </div>
+<body>
+    <div class="content">
+        <table class="styled-table">
+            <tr>
+                <th>UserID</th>
+                <th>Username</th>
+                <th>Wants Contact?</th>
+                <th>Public?</th>
+                <th>Email Address</th>
+                <th>Feedback Given</th>
+                <th>Timestamp</th>
+            </tr>
+            {% for user in users %}
+            <tr>
+                <td>{{user[1]}}</td>
+                <td>{{user[2]}}</td>
+                <td>{{user[3]}}</td>
+                <td>{{user[7]}}</td>
+                <td>{{user[4]}}</td>
+                <td>{{user[5]}}</td>
+                <td>{{user[6]}}</td>
+            </tr>
+            {% endfor %}
+          </table>
+      </div>
+</body>
+</html>

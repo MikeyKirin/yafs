@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Write some feedback!</title>
+    <link rel="stylesheet" href="../static/style.css">
+</head>
+        <div class="topnav" id="topnav">
+            <a href="{{ url_for('index')}}">Home</a>
+            <a href="{{ url_for('feedback')}}" class="active">Feedback</a>
+            <a href="{{ url_for('admin')}}">Admin Panel</a>
+        </div>
+<body>
+    <div class="content">
+        <div class="feedback-content">
+            <div>
+                <h1>Let's Gather Some Info</h1>
+                <br>
+                <form action="{{ url_for('feedback')}}" method="post">
+                    <label for="name">Your Discord Name</label><br>
+                        <input type="text" class="name" name="username">
+                    <br><br>
+
+                    
+                    <label for="is-public">Would you like to be your submission to be public or private?</label><br>
+                        <input type="radio" name="public" id="yes_public" value="Public"> Yes </input><br>
+                        <input type="radio" name="public" id="no_public" value="Not Public"> No </input><br>
+                    <br><br>
+
+                        <label for="email">Write your email below</label>
+                        <input type="text" class="email" name="email">
+                    <br><br>
+
+                    <label for="should-contact">Would you like to be contacted by our team regarding your submission?</label><br>
+                        <input type="radio" name="contact" id="yes_contact" value="Contact"> Yes </input><br>
+                        <input type="radio" name="contact" id="no_contact" value="Don't Contact"> No </input><br>
+                    <br><br>
+
+                    <label for="form-text">Please write your thoughts below:</label><br>
+                        <input type="text" class="form-text" name="feedback_text"><br><br>
+                            <button type="submit">Submit Your Feedback</button>
+                </form>
+            </div>
+        </div>  
+    </div>
+</body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yet Another Feedback System - Discord Edition!</title>
+    <link rel="stylesheet" href="../static/style.css">
+</head>
+<div class="topnav" id="topnav">
+    <a href="{{ url_for('index')}}">Home</a>
+    <a href="{{ url_for('feedback')}}" class="active">Feedback</a>
+    <a href="{{ url_for('admin')}}">Admin Panel</a>
+</div>
+<body>
+    <div class="content">
+        <div>
+            <div class="content-container">
+                <div class="home-text">
+                    Welcome to the [INSERTNAMEHERE] Feedback System!
+                    <br>
+                    Are you leaving feedback, or accessing the admin panel?
+                </div>
+                    <br>
+                    <br>
+                <div class="home-buttons">
+                    <a href="{{ url_for('feedback')}}">
+                        <button>Go To The Feedback Form</button>
+                    </a>
+                    <br>
+                    <br>
+                    <a href="{{ url_for('admin')}}">
+                        <button>Go To The Admin Panel</button>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
